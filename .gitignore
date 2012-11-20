@@ -7,8 +7,8 @@
 .metadata
 bin/
 tmp/
-*.psd
 *.png
+*.psd
 *.tmp
 *.bak
 *.swp

@@ -10,17 +10,19 @@
 		<img alt="mail" height="143" src="images/envelope.png" width="188" />
 	</div>
 	
-	<div style="line-height: 0.5em; margin-top: -6;">
+	<div style="float: right; line-height: 0.5em; margin-top: -15;">
 		<ul>
 				<?php
+				/*
 					if($_SESSION['signed_in'])
 					{
 						echo '<li style="line-height: 0.1em; color:FFFDFD;">Hello <b>' . htmlentities($_SESSION['user_name']) . '</b>. Not you? <a href="/handler/signout.php"> Sign out</a></li>';
 					}
 					else
 					{
-						echo '<li style="line-height: 0.1em"><p><b><a href="login.php" style="color:FFFDFD">Edit Website</a></b></p></li>';
+						echo '<li style="line-height: 0.1em"><p><b><a href="login.php" style="color:FFFDFD">Sign in</a> or <a href="register.php" style="color:FFFDFD">create an account</a></b></p></li>';
 					}
+				*/
 				?>
 		</ul>
 	</div>
