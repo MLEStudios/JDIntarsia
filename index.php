@@ -11,7 +11,8 @@
 	<title>JD Intarsia</title>
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
-</head>
+	<link rel="stylesheet" type="text/css" href="pictures.css" />
+	</head>
 <body>
 	<div id="wrapper">
 		<div id="header">
@@ -57,8 +58,39 @@
 				<br />	
 					
 			</div>
+			
+			
+			<div id="content">
+				<div>
+					<section id="photos">
+				
+					<?php 
+						$sql = "SELECT id, images FROM projects WHERE push = 1"; //id, title , content
+						$result = mysql_query($sql);
+							
+						if(!$result)
+						{
+							echo 'The server could not be reached, please try again later.' . mysql_error();
+						}
+						else
+						{
+							echo '<table style="width: 650px;">';
+							while($row = mysql_fetch_assoc($result))
+							{
+								echo '<img src="' . $row['images'] . '" alt="Image" >';
+							}
+						}
+					?>
+					</section>
+				</div>
+				</table>
+				<br />	
+					
+			</div>
 		
 		</div>
+		
+		
 
 	</div>
 </body>
